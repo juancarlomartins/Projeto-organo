@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Aprenda React
+          Projeto Organo
         </a>
       </header>
     </div>
