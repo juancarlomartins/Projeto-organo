@@ -1,6 +1,6 @@
 //Criando nosso primeiro componente React.
 import './Banner.css'
-function Banner() {
+export const Banner = () => {
     // JSX como o react trabalha com o visual, parece html, mas não é
     return (
         <header className="banner">
@@ -9,5 +9,5 @@ function Banner() {
     )
 }
 
-export default Banner;
+export default Banner
 //className é usado para arquivo JavaScript.
