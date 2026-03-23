@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Banner from './componentes/Banner/Banner'; //É obrigatório importar primeiro todos os componentes que se for utilizar naquela página.
 
 function App() {
   return (
     <div className="App">
-      <h1>Olá seja bem-vindo ao meu site.</h1>
+      <Banner />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
