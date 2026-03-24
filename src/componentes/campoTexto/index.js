@@ -1,9 +1,9 @@
 import './campoTexto.css'
-const CampoTexto = () => {
+const CampoTexto = (props) => {
     return (
         <div className="campo-texto">
-            <label>Nome</label>
-            <input placeholder='Digite o seu nome'></input>
+            <label>{props.label}</label>
+            <input placeholder={props.placeholder}></input>
         </div>
     )
 }
@@ -17,3 +17,7 @@ export default CampoTexto
 //fazer import desse component de uma maneira mais organizada, pois é
 // fazer a leitura apenas pela pasta que reconhece o arquivo chamado de 
 // "index"
+
+
+//props é uma propiedade para receber o valor do label que foi digitado no app.js
+//Assim é possível reaproveitar o campo para outros valores de entrada de dados.
