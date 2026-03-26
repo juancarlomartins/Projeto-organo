@@ -70,7 +70,36 @@ const Cabecalho = () => {
                     >
                         Início
                     </button>
+                    <button
+                        className='botao-menu'
+                        onClick={() => handleMenuClick('Sobre')}
+                    >
+                        Sobre
+                    </button>
+                    <button
+                        className='botao-menu'
+                        onClick={() => handleMenuClick('Contato')}
+                    >
+                        Contato
+                    </button>
                 </nav>
+
+                {/* caixa de pesquisa */}
+                <form className='pesquisa-conteiner' onSubmit={handlePesquisa}>
+                    <div className='pesquisa-wrapper'>
+                        <input
+                            type='text'
+                            className='pesquisa-input'
+                            placeholder='Pesquisar...'
+                            value={termoPesquisa}
+                            onChange={(e) => setTermoPesquisa(e.target.value)}
+                        />
+                        <button type='submit' className='pesquisa-botao'>
+                            
+                        </button>
+
+                    </div>
+                </form>
             </div>
         </header>
     )
