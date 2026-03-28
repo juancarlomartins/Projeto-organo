@@ -18,7 +18,255 @@
     position: relative;
 }
 
-.logo-contiener {
+.logo-conteiner {
     display: flex;
-    
+}
+
+.logo-conteiner:hover {
+    transform: scale(1.05);
+}
+
+.icone-site {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-svg {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.logo-conteiner:hover .icone-svg {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.nome-site {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-desktop {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.botao-menu {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.botao-menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.botao-menu:hover::after {
+    width: 80%;
+}
+
+.botao-menu:hover {
+    background:rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.botao-menu:active {
+    transform: translateY(0);
+}
+
+.pesquisa-conteiner {
+    flex: 1;
+    max-width: 300px;
+}
+
+.pesquisa-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.pesquisa-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.pesquisa-input::placeholder {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.pesquisa-botao {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.pesquisa-botao svg {
+    color: white;
+}
+
+.pesquisa-botao:hover {
+    transform: scale(1.1);
+}
+
+.menu-mobile-botao {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-mobile-botao svg {
+    color: white;
+}
+
+.menu-mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.botao-menu-mobile {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.botao-menu-mobile:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cabecalho-container {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile-botao {
+    display: flex;
+  }
+
+  .menu-mobile {
+    display: flex;
+  }
+
+    .nome-site {
+    font-size: 1.2rem;
+  }
+
+  .pesquisa-container {
+    max-width: 200px;
+  }
+
+  .pesquisa-input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .pesquisa-botao {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecalho-container {
+    padding: 0.5rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .nome-site {
+    display: none;
+  }
+
+  .pesquisa-container {
+    max-width: 150px;
+  }
+
+  .icone-svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.pesquisa-botao:active svg {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
