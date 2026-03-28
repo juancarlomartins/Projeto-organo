@@ -70,6 +70,14 @@ const Cabecalho = () => {
                     >
                         Início
                     </button>
+
+                    <button
+                        className='botao-menu'
+                        onClick={() => handleMenuClick('Organogramas')}
+                    >
+                        Organogramas
+                    </button>
+                    
                     <button
                         className='botao-menu'
                         onClick={() => handleMenuClick('Sobre')}
