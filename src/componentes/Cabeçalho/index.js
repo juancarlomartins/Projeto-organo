@@ -154,6 +154,13 @@ const Cabecalho = () => {
 
                         <button
                             className='botao-menu-mobile'
+                            onClick={() => handleMenuClick('Conteúdo')}
+                        >
+                            Conteúdo
+                        </button>
+
+                        <button
+                            className='botao-menu-mobile'
                             onClick={() => handleMenuClick('Sobre')}
                         >
                             Sobre
