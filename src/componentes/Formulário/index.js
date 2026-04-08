@@ -15,14 +15,20 @@ const Formulario = () => {
     'Inovação e Gestão'
   ]
 
+  const aoSalvar = (evento) => {
+    evento.preventDefault() //Previnir o comportamento padrão.
+    console.log('Form foi submetido')
+  }
+
   return (
     <section className="formulario">
-      <form onSubmit={}>
+      <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <CampoTexto label="Nome" placeholder="Digite o seu nome" />
-        <CampoTexto label="Cargo" placeholder="Digite o seu cargo" />
+        <CampoTexto obrigatorio={true} label="Nome*" placeholder="Digite o seu nome" />
+        <CampoTexto obrigatorio={true} label="Cargo*" placeholder="Digite o seu cargo" />
         <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
-        <ListaSuspensa label="Times" itens={times}/>
+        <ListaSuspensa obrigatorio={true} label="Time" itens={times}/>
+        <p className="required">Os campos com "*" são obrigatórios.</p>
         <Botao>
             Criar card
         </Botao>
