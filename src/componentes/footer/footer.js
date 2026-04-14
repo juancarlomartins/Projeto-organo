@@ -13,7 +13,7 @@ const Footer = () => {
 
     //Redes sociais do site
     const socialLinks = [
-        {name: 'Instagrem', icon: '', url: 'https://instagram.com'},
+        {name: 'Instagram', icon: '', url: 'https://instagram.com'},
         {name: 'Linkedin', icon: '', url: 'https://linkedin.com'},
         {name: 'YouTube', icon: '', url: 'https://youtube.com'},
         {name: 'Twitter(X)', icon: '', url: 'https://x.com'}

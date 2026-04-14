@@ -28,3 +28,154 @@
     background-clip: text;
 }
 
+.site-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.col-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+.col-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #425196;
+}
+
+.social-links {
+    color: white;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.social-link:hover {
+    opacity: 1;
+    transform: translate(5px);
+}
+
+.social-icon {
+    font-size: 1.3rem;
+    width: 24px;
+}
+
+.social-name {
+    font-size: 0.9rem;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem
+}
+
+.menu-button {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.menu-button:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(0) scale(1.02);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.divider {
+    height: 1px;
+    background-color: #192249;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-col {
+    align-items: center;
+  }
+
+  .col-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    align-items: center;
+  }
+
+  .social-link:hover {
+    transform: translateX(0) scale(1.05);
+  }
+
+  .menu-buttons {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .menu-button:hover {
+    transform: translateX(0) scale(1.02);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .site-name {
+    font-size: 1.5rem;
+  }
+
+  .menu-buttons {
+    max-width: 100%;
+  }
+}
