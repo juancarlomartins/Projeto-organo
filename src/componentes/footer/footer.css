@@ -1,131 +1,135 @@
+/* Footer.css */
 .footer {
-    background: linear-gradient(135deg, #425196 0%, #764ba2 100%);
-    color: white;
-    padding: 3rem 2rem 1.5rem;
-    margin-top: auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem 1.5rem;
+  margin-top: auto;
 }
 
-.footer-conteiner{
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
+/* Estilos das Colunas */
 .footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .site-name {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
-    background: transparent;
-    background-clip: text;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #fff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .site-description {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    line-height: 1.5;
-    margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .col-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0 0 0.5rem 0;
-    position: relative;
-    display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  display: inline-block;
 }
 
 .col-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: #425196;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #ffd700;
 }
 
+/* Redes Sociais */
 .social-links {
-    color: white;
-    flex-direction: column;
-    gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .social-link {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    opacity: 0.9;
-    line-height: 1.5;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.9;
 }
 
 .social-link:hover {
-    opacity: 1;
-    transform: translate(5px);
+  opacity: 1;
+  transform: translateX(5px);
 }
 
 .social-icon {
-    font-size: 1.3rem;
-    width: 24px;
+  font-size: 1.3rem;
+  width: 24px;
 }
 
 .social-name {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
+/* Botões do Menu */
 .menu-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .menu-button {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.menu-button:hover{
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(0) scale(1.02);
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
 }
 
+/* Footer Bottom */
 .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .divider {
-    height: 1px;
-    background-color: #192249;
-    margin-bottom: 1rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
 }
 
 .copyright {
-    text-align: center;
-    font-size: 0.85rem;
-    opacity: 0.8;
-    margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0;
 }
-
-
 
 /* Responsividade */
 @media (max-width: 768px) {
