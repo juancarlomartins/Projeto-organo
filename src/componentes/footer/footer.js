@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="footer-col footer-col-left">
           <h3 className="site-name">Organo</h3>
           <p className="site-description">
-            Criando soluções inovadoras para o seu negócio.
+            Criando soluções inovadoras para o sua empresa.
           </p>
         </div>
 
