@@ -1,13 +1,16 @@
+import { useState } from 'react' // Para controlar o estado geral do componente.
 import './campoTexto.css'
 const CampoTexto = (props) => {
 
     const placeholderModificada = `${props.placeholder}...`
 
-    let valor = '' //variável para guardar o valor da entrada.
+    //let valor = '' //variável para guardar o valor da entrada.
 
+
+    const [valor, setValor] = useState('') // set -- forma de definir um valor. -- Nesse campo também agora são atualizados os estados juntos.
 
     const aoDigitado = (evento) => { // target é um evento do JavaScript.
-        valor = evento.target.value
+        setValor(evento.target.value)
         console.log(valor) // guardando a referência numa variável.
     }
 
@@ -16,7 +19,7 @@ const CampoTexto = (props) => {
             <label>
                 {props.label}
             </label>
-            <input onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada}></input>
+            <input value={valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada}></input>
         </div>
     )
 }
