@@ -19,10 +19,11 @@ const Formulario = () => {
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
+  const [time, setTime] = useState('')
 
   const aoSalvar = (evento) => {
     evento.preventDefault() //Previnir o comportamento padrão.
-    console.log('Form foi submetido', nome, cargo, imagem)
+    console.log('Form foi submetido', '\n',nome ,'\n', cargo,'\n', imagem, '\n', time)
   }
 
   return (
@@ -52,6 +53,8 @@ const Formulario = () => {
         <ListaSuspensa 
           obrigatorio={true} 
           label="Time" itens={times}
+          valor={time}
+          aoAlterado={valor => setTime(valor)}
         />
         <p className="required">Os campos com "*" são obrigatórios.</p>
         <Botao>
