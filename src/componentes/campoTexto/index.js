@@ -1,9 +1,22 @@
 import './campoTexto.css'
 const CampoTexto = (props) => {
+
+    const placeholderModificada = `${props.placeholder}...`
+
+    let valor = '' //variável para guardar o valor da entrada.
+
+
+    const aoDigitado = (evento) => { // target é um evento do JavaScript.
+        valor = evento.target.value
+        console.log(valor) // guardando a referência numa variável.
+    }
+
     return (
         <div className="campo-texto">
-            <label>{props.label}</label>
-            <input required={props.obrigatorio}placeholder={props.placeholder}></input>
+            <label>
+                {props.label}
+            </label>
+            <input onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada}></input>
         </div>
     )
 }

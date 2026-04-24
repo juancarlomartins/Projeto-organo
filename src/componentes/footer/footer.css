@@ -48,13 +48,13 @@
 }
 
 .col-title::after {
-  content: '';
+  content: ' ';
   position: absolute;
   bottom: -5px;
   left: 0;
-  width: 30px;
+  width: 120px;
   height: 2px;
-  background: #ffd700;
+  background: #ffffff;
 }
 
 /* Redes Sociais */
