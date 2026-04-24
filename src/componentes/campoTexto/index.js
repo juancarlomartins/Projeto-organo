@@ -4,14 +4,10 @@ const CampoTexto = (props) => {
 
     const placeholderModificada = `${props.placeholder}...`
 
-    //let valor = '' //variável para guardar o valor da entrada.
-
-
     const [valor, setValor] = useState('') // set -- forma de definir um valor. -- Nesse campo também agora são atualizados os estados juntos.
 
     const aoDigitado = (evento) => { // target é um evento do JavaScript.
-        setValor(evento.target.value)
-        console.log(valor) // guardando a referência numa variável.
+        props.aoAlterado(evento.target.value)
     }
 
     return (
@@ -19,7 +15,7 @@ const CampoTexto = (props) => {
             <label>
                 {props.label}
             </label>
-            <input value={valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada}></input>
+            <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada}></input>
         </div>
     )
 }
@@ -37,3 +33,11 @@ export default CampoTexto
 
 //props é uma propiedade para receber o valor do label que foi digitado no app.js
 //Assim é possível reaproveitar o campo para outros valores de entrada de dados.
+
+
+//Cada campo de texto deve ter seu estado individual, e até para as imagens.
+//
+//
+//
+//
+//
